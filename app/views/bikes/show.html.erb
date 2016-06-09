@@ -12,12 +12,18 @@
 
       </ul>
     </div>
+    <div class="container likes">
+      <%= button_to "", class: "btn btn-primary" do %>
+        Likes <span class="badge"> <%= @bike.likes.count %> </span>
+      <% end %>
+    </div>
   </div>
 </div>
 
 <% if current_user && current_user.id == @bike.user_id %>
   <%= link_to "Edit bike build", edit_bike_path %>
 <% end %>
+
 
 <!-- if bike built by current user, able to delete or edit -->
 
