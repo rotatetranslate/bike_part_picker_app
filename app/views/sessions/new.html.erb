@@ -1,5 +1,4 @@
-<!-- <link rel="stylesheet" href="../../../assets/stylesheets/login.css"> -->
-<div>
+<!-- <div>
   <h1>Log In</h1>
   <p id="alert"><%= alert %></p>
   <%= form_tag sessions_path do %>
@@ -13,4 +12,24 @@
     </div>
     <div class="actions"><%= submit_tag "Log In" %></div>
   <% end %>
+</div> -->
+
+
+<div class="container">
+  <div class="panel panel-default text-center">
+    <div class="panel-heading">
+      <h1 class="panel-title">Log In</h1>
+    </div>
+    <div class="panel-body">
+      <p id="alert"><%= alert %></p>
+      <%= bootstrap_form_tag url: '/login' do |f| %>
+          <%= label_tag :username %>
+          <%= text_field_tag :username, params[:username] %>
+          <%= label_tag :password %>
+          <%= password_field_tag :password %>
+        <%= f.primary "Log In" %>
+      <% end %>
+    </div>
+  </div>
 </div>
+

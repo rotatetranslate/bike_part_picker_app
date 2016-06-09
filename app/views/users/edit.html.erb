@@ -1,22 +1,28 @@
-<div class="container sign-up">
-  <h1>Edit User Information</h1>
-  <%= bootstrap_form_for @user do |f| %>
-    <% if @user.errors.any? %>
-      <div class="error_messages">
-        <h2>Form is invalid</h2>
-        <ul>
-          <% for message in @user.errors.full_messages %>
-            <li><%= message %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-      <%= f.text_field :username, placeholder: current_user.username %>
-      <%= f.email_field :email, placeholder: current_user.email %>
-      <%= f.password_field :password %>
-      <%= f.password_field :password_confirmation %>
-      <%= f.text_area :about %>
-      <%= f.primary %>
-  <% end %>
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h1 class="panel-title">Edit User Information</h1>
+    </div>
+    <div class="panel-body">
+      <%= bootstrap_form_for @user do |f| %>
+        <% if @user.errors.any? %>
+          <div class="error_messages">
+            <h2>Form is invalid</h2>
+            <ul>
+              <% for message in @user.errors.full_messages %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+          <%= f.text_field :username, placeholder: current_user.username %>
+          <%= f.email_field :email, placeholder: current_user.email %>
+          <%= f.password_field :password %>
+          <%= f.password_field :password_confirmation %>
+          <%= f.text_area :about %>
+          <%= f.primary %>
+      <% end %>
+    </div>
+  </div>
 </div>
 
