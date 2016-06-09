@@ -41,7 +41,38 @@ class BikesController < ApplicationController
   private
 
   def bike_params
-    params.require(:bike).permit(:build_name, :description)
+    params.require(:bike).permit(
+      :frame,
+      :frame_cost,
+      :fork,
+      :fork_cost,
+      :headset,
+      :headset_cost,
+      :stem,
+      :stem_cost,
+      :handlebars,
+      :handlebars_cost,
+      :saddle,
+      :saddle_cost,
+      :seatpost,
+      :seatpost_cost,
+      :brakes,
+      :brakes_cost,
+      :wheels,
+      :wheels_cost,
+      :tires,
+      :tires_cost,
+      :pedals,
+      :pedals_cost,
+      :cog,
+      :cog_cost,
+      :crankset,
+      :crankset_cost,
+      :chain,
+      :chain_cost,
+      :build_name,
+      :description,
+    )
   end
 
 end

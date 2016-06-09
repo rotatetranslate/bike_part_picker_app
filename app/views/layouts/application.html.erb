@@ -8,6 +8,30 @@
 </head>
 <body>
 
+<div class="container nav-container">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav center">
+        <li class="navbar-brand" role="button"><%= link_to 'Bike Part Picker', root_path %></li>
+        <img src="<%= image_path('bike2.png')%>" alt="Bike Part Picker" class="logo">
+      </ul>
+        <% if current_user %>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="navbar-text"><%= link_to "Welcome, #{current_user.username}", edit_user_path(current_user.id) %></a></li>
+          <li class="navbar-text" role="button"><%= link_to 'Start a new build', new_bike_path %></li>
+          <li class="navbar-text" role="button"><%= link_to 'Browse Bikes', bikes_path %></li>
+          <li class="navbar-text" role="button"><%= link_to 'Log Out', session_path('dummy'), method: :delete %></li>
+        </ul>
+        <% else %>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="navbar-text" role="button"><%= link_to 'Sign Up', new_user_path %></li>
+          <li class="navbar-text" role="button"><%= link_to 'Log In', login_path %></li>
+        </ul>
+        <% end %>
+    </div>
+  </nav>
+</div>
+
 <%= yield %>
 
 </body>

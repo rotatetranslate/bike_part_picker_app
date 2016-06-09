@@ -2,6 +2,16 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+  root 'bikes#home'
+
+  resources :bikes
+
+  resources :users
+
+  resources :sessions, only: [:new, :create, :destroy]
+  get '/login', to: 'sessions#new'
+  get '/logout', to: 'sessions#destroy'
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
