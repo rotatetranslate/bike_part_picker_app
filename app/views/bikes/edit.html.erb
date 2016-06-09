@@ -1,1 +1,12 @@
-edit.html.erb
+<div class="container new-bike-container">
+  <%= bootstrap_form_for(@bike) do |f| %>
+    <%= f.text_field :frame, placeholder: @bike.frame %>
+    <%= f.number_field :frame_cost, placeholder: @bike.frame_cost %>
+    <%= f.text_field :fork, placeholder: @bike.fork %>
+    <%= f.number_field :fork_cost, placeholder: @bike.fork_cost %>
+
+
+    <%= f.primary "Update build" %>
+  <% end %>
+</div>
+

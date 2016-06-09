@@ -1,5 +1,7 @@
 <div class="container new-bike-container">
   <%= bootstrap_form_for(@bike) do |f| %>
+    <%= f.text_field :build_name %>
+    <%= f.text_field :description %>
     <%= f.text_field :frame, inline: true %>
     <%= f.number_field :frame_cost, inline: true %>
     <%= f.text_field :fork %>

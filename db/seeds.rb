@@ -48,9 +48,9 @@ b1 = Bike.create({
     })
 
 b2 = Bike.create({
-      frame: 'White Colossi Cheeko 50cm',
+      frame: 'Cannondale Supersix 52cm',
       frame_cost: 300,
-      fork: 'Colossi',
+      fork: 'Cannondale Supersix',
       fork_cost: nil,
       headset: 'Cane Creek',
       headset_cost: 25,
@@ -76,8 +76,8 @@ b2 = Bike.create({
       crankset_cost: 200,
       chain: 'Izumi Eco',
       chain_cost: 25,
-      build_name: 'First track bike',
-      description: 'Aluminum frame with Mid-level parts'
+      build_name: '2nd test bike',
+      description: 'just another bike'
     })
 
 User.first.bikes << b1

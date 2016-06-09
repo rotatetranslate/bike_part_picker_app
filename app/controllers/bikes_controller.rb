@@ -14,6 +14,7 @@ class BikesController < ApplicationController
 
   def create
     @bike = Bike.new bike_params
+    current_user.bikes << @bike
     if @bike.save
       redirect_to bikes_path, notice: "Build added!"
     else
@@ -23,6 +24,7 @@ class BikesController < ApplicationController
 
   def edit
     @bike = Bike.find(params[:id])
+
   end
 
   def update

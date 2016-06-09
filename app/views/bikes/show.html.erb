@@ -1,1 +1,24 @@
-show.html.erb
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title"> <%= @bike.build_name %> </div>
+      <article> <%= @bike.description %> </article>
+    </div>
+    <div class="panel-body">
+      <ul class="list-group">
+      <!-- for each attribute that is not nil -->
+        <li class="list-group-item"> <%= @bike.frame %> </li>
+        <li class="list-group-item"> <%= @bike.user_id %> </li>
+
+      </ul>
+    </div>
+  </div>
+</div>
+
+<% if current_user && current_user.id == @bike.user_id %>
+  <%= link_to "Edit bike build", edit_bike_path %>
+<% end %>
+
+<!-- if bike built by current user, able to delete or edit -->
+
+<!-- calculate total price -->
