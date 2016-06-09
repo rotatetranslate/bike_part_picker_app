@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   root 'bikes#home'
 
-  resources :bikes
+  resources :bikes do
+    resource :likes, only: [:create, :destroy]
+  end
 
   resources :users
 

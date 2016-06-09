@@ -13,10 +13,17 @@
       </ul>
     </div>
     <div class="container likes">
-      <%= button_to "", class: "btn btn-primary" do %>
-        Likes <span class="badge"> <%= @bike.likes.count %> </span>
+      <% if @bike.likes.exists? current_user %>
+        <%= button_to bike_likes_path(@bike), class: "btn btn-success", method: :delete do %>
+          Liked ✔ <span class="badge"><%= @bike.likes.count %></span>
+        <% end %>
+      <% else %>
+        <%= button_to bike_likes_path(@bike), class: "btn btn-primary" do %>
+          Like <span class="badge"> <%= @bike.likes.count %> </span>
+        <% end %>
       <% end %>
     </div>
+
   </div>
 </div>
 
