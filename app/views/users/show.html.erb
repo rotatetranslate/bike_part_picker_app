@@ -17,20 +17,26 @@
   </div>
 </div>
 
-Liked bikes
-  <% @user.likes.each do |bike| %>
-    <div class="container">
-      <div class="col-md-4">
-        <div class="thumbnail">
-          <img src="..." alt="...">
-          <div class="caption text-center">
-            <h3><%= bike.build_name %></h3>
-            <p><%= bike.description %></p>
-            <%= link_to bike_path(bike.id), class: "btn btn-primary" do %>
-              View Build
-            <% end %>
+<div class="container">
+    <div class="panel panel-success">
+    <div class="panel-heading">
+      <div class="panel-title text-center">Liked Bikes</div>
+    </div>
+    <div class="panel-body">
+    <% @user.likes.each do |bike| %>
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <div class="caption text-center">
+              <h3><%= bike.build_name %></h3>
+              <p><%= bike.description %></p>
+              <%= link_to bike_path(bike.id), class: "btn btn-primary" do %>
+                View Build
+              <% end %>
+            </div>
           </div>
         </div>
-      </div>
-  <% end %>
+    <% end %>
+    </div>
+  </div>
 </div>
+

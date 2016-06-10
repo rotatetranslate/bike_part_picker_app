@@ -63,7 +63,7 @@
           <%= f.text_field :chain %>
           <span class="pull-right"><%= f.number_field :chain_cost, prepend: "$", append: ".00" %></span>
         </div>
-
+        <%puts f.number_field :chain_cost %>
         <%= f.primary "Submit new build" %>
       <% end %>
 
