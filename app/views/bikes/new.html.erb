@@ -7,12 +7,62 @@
       <%= bootstrap_form_for(@bike) do |f| %>
         <%= f.text_field :build_name %>
         <%= f.text_area :description %>
-        <div class="form-group form-inline form-control">
-        <%= f.text_field :frame %>
-        <%= f.number_field :frame_cost %>
+        <div class="form-group form-inline">
+          <%= f.text_field :frame %>
+          <span class="pull-right"><%= f.number_field :frame_cost, prepend: "$", append: ".00" %> </span>
         </div>
-        <%= f.text_field :fork %>
-        <%= f.number_field :fork_cost %>
+        <div class="form-group form-inline">
+          <%= f.text_field :fork %>
+          <span class="pull-right"><%= f.number_field :fork_cost, prepend: "$", append: ".00" %></span>
+        </div>
+        <div class="form-group form-inline">
+          <%= f.text_field :headset %>
+          <span class="pull-right"><%= f.number_field :headset_cost, prepend: "$", append: ".00" %></span>
+        </div>
+        <div class="form-group form-inline">
+          <%= f.text_field :stem %>
+          <span class="pull-right"><%= f.number_field :stem_cost, prepend: "$", append: ".00" %></span>
+        </div>
+        <div class="form-group form-inline">
+          <%= f.text_field :handlebars %>
+          <span class="pull-right"><%= f.number_field :handlebars_cost, prepend: "$", append: ".00" %></span>
+        </div>
+        <div class="form-group form-inline">
+          <%= f.text_field :saddle %>
+         <span class="pull-right"> <%= f.number_field :saddle_cost, prepend: "$", append: ".00" %></span>
+        </div>
+        <div class="form-group form-inline">
+          <%= f.text_field :seatpost %>
+          <span class="pull-right"><%= f.number_field :seatpost_cost, prepend: "$", append: ".00" %></span>
+        </div>
+        <div class="form-group form-inline">
+          <%= f.text_field :brakes %>
+          <span class="pull-right"><%= f.number_field :brakes_cost, prepend: "$", append: ".00" %></span>
+        </div>
+        <div class="form-group form-inline">
+          <%= f.text_field :wheels %>
+          <span class="pull-right"><%= f.number_field :wheels_cost, prepend: "$", append: ".00" %></span>
+        </div>
+        <div class="form-group form-inline">
+          <%= f.text_field :tires %>
+          <span class="pull-right"><%= f.number_field :tires_cost, prepend: "$", append: ".00" %></span>
+        </div>
+        <div class="form-group form-inline">
+          <%= f.text_field :pedals %>
+          <span class="pull-right"><%= f.number_field :pedals_cost, prepend: "$", append: ".00" %></span>
+        </div>
+        <div class="form-group form-inline">
+          <%= f.text_field :crankset %>
+          <span class="pull-right"><%= f.number_field :crankset_cost, prepend: "$", append: ".00" %></span>
+        </div>
+        <div class="form-group form-inline">
+          <%= f.text_field :cog %>
+         <span class="pull-right"> <%= f.number_field :cog_cost, prepend: "$", append: ".00" %></span>
+        </div>
+        <div class="form-group form-inline">
+          <%= f.text_field :chain %>
+          <span class="pull-right"><%= f.number_field :chain_cost, prepend: "$", append: ".00" %></span>
+        </div>
 
         <%= f.primary "Submit new build" %>
       <% end %>
@@ -20,25 +70,5 @@
     </div>
   </div>
 </div>
-
-
-
-<div class="container new-bike-container">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <div class="panel-title">Build Your Bike</div>
-    </div>
-    <div class="panel-body">
-
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
 
 

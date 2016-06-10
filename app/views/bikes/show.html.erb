@@ -21,7 +21,9 @@
         <li class="list-group-item"><strong>Crankset: </strong><%= @bike.crankset %> <span class="pull-right"><strong>Cost: </strong>$<%= @bike.crankset_cost %>.00</span></li>
         <li class="list-group-item"><strong>Cog: </strong><%= @bike.cog %> <span class="pull-right"><strong>Cost: </strong>$<%= @bike.cog_cost %>.00</span></li>
         <li class="list-group-item"><strong>Chain: </strong><%= @bike.chain %> <span class="pull-right"><strong>Cost: </strong>$<%= @bike.chain_cost %>.00</span></li>
-
+        <li class="list-group-item text-center"><strong>Total Cost:</strong>
+        $<%= @bike.frame_cost + @bike.fork_cost + @bike.headset_cost + @bike.stem_cost + @bike.handlebars_cost + @bike.saddle_cost + @bike.seatpost_cost + @bike.brakes_cost + @bike.wheels_cost + @bike.tires_cost + @bike.pedals_cost + @bike.crankset_cost + @bike.cog_cost + @bike.chain_cost %>.00
+        </li>
       </ul>
     </div>
     <div class="container likes">
