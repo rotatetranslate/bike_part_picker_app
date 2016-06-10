@@ -6,9 +6,21 @@
     </div>
     <div class="panel-body">
       <ul class="list-group">
-      <!-- for each attribute that is not nil -->
-        <li class="list-group-item"> <%= @bike.frame %> </li>
-        <li class="list-group-item"> <%= @bike.user_id %> </li>
+
+        <li class="list-group-item"><strong>Frame: </strong><%= @bike.frame %> <span class="pull-right"><strong>Cost: </strong>$<%= @bike.frame_cost %>.00</span></li>
+        <li class="list-group-item"><strong>Fork: </strong><%= @bike.fork %> <span class="pull-right"><strong>Cost: </strong>$<%= @bike.fork_cost %>.00</span></li>
+        <li class="list-group-item"><strong>Headset: </strong><%= @bike.headset %> <span class="pull-right"><strong>Cost: </strong>$<%= @bike.headset_cost %>.00</span></li>
+        <li class="list-group-item"><strong>Stem: </strong><%= @bike.stem %> <span class="pull-right"><strong>Cost: </strong>$<%= @bike.stem_cost %>.00</span></li>
+        <li class="list-group-item"><strong>Handlebars: </strong><%= @bike.handlebars %> <span class="pull-right"><strong>Cost: </strong>$<%= @bike.handlebars_cost %>.00</span></li>
+        <li class="list-group-item"><strong>Saddle: </strong><%= @bike.saddle %> <span class="pull-right"><strong>Cost: </strong>$<%= @bike.saddle_cost %>.00</span></li>
+        <li class="list-group-item"><strong>Seatpost: </strong><%= @bike.seatpost %> <span class="pull-right"><strong>Cost: </strong>$<%= @bike.seatpost_cost %>.00</span></li>
+        <li class="list-group-item"><strong>Brakes: </strong><%= @bike.brakes %> <span class="pull-right"><strong>Cost: </strong>$<%= @bike.brakes_cost %>.00</span></li>
+        <li class="list-group-item"><strong>Wheelset: </strong><%= @bike.wheels %> <span class="pull-right"><strong>Cost: </strong>$<%= @bike.wheels_cost %>.00</span></li>
+        <li class="list-group-item"><strong>Tires: </strong><%= @bike.tires %> <span class="pull-right"><strong>Cost: </strong>$<%= @bike.tires_cost %>.00</span></li>
+        <li class="list-group-item"><strong>Pedals: </strong><%= @bike.pedals %> <span class="pull-right"><strong>Cost: </strong>$<%= @bike.pedals_cost %>.00</span></li>
+        <li class="list-group-item"><strong>Crankset: </strong><%= @bike.crankset %> <span class="pull-right"><strong>Cost: </strong>$<%= @bike.crankset_cost %>.00</span></li>
+        <li class="list-group-item"><strong>Cog: </strong><%= @bike.cog %> <span class="pull-right"><strong>Cost: </strong>$<%= @bike.cog_cost %>.00</span></li>
+        <li class="list-group-item"><strong>Chain: </strong><%= @bike.chain %> <span class="pull-right"><strong>Cost: </strong>$<%= @bike.chain_cost %>.00</span></li>
 
       </ul>
     </div>

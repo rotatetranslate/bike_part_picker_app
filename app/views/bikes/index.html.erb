@@ -7,6 +7,7 @@
           <div class="caption text-center">
             <h3><%= bike.build_name %></h3>
             <p><%= bike.description %></p>
+<!--             <p><strong>Build by:</strong> <%= bike.user %></p> -->
             <%= link_to bike_path(bike.id), class: "btn btn-primary" do %>
               View Build
             <% end %>
