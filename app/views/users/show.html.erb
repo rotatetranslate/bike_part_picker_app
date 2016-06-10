@@ -1,7 +1,7 @@
 <div class="container">
   <div class="panel panel-default">
     <div class="panel-heading">
-      <div class="panel-title">User Information</div>
+      <div class="panel-title">User Profile</div>
     </div>
     <div class="panel-body">
       <ul class="list-group">
@@ -10,9 +10,25 @@
         <li class="list-group-item">
           <article><strong>about:</strong> <%= @user.about %> </article>
         </li>
+        <br>
+        <p class="text-center"><%= link_to "Edit user info", edit_user_path %></p>
       </ul>
     </div>
   </div>
 </div>
 
 Liked bikes
+  <% @user.likes.each do |bike| %>
+    <div class="container">
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <img src="..." alt="...">
+          <div class="caption text-center">
+            <h3><%= bike.build_name %></h3>
+            <p><%= bike.description %></p>
+            <p> <%= link_to "View Build", bike_path(bike.id) %> </p>
+          </div>
+        </div>
+      </div>
+  <% end %>
+</div>

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :bikes do
     resource :likes, only: [:create, :destroy]
+    resources :comment, only: []
   end
 
   resources :users
