@@ -1,15 +1,32 @@
-<div class="container new-bike-container">
-  <%= bootstrap_form_for(@bike) do |f| %>
-    <%= f.text_field :build_name %>
-    <%= f.text_field :description %>
-    <%= f.text_field :frame, inline: true %>
-    <%= f.number_field :frame_cost, inline: true %>
-    <%= f.text_field :fork %>
-    <%= f.number_field :fork_cost %>
+<div class="container new-bike-container text-center">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">Build Your Bike</div>
+    </div>
+    <div class="panel-body">
+      <%= bootstrap_form_for(@bike) do |f| %>
+        <%= f.text_field :build_name %>
+        <%= f.text_area :description %>
+        <div class="form-group form-inline form-control">
+        <%= f.text_field :frame %>
+        <%= f.number_field :frame_cost %>
+        </div>
+        <%= f.text_field :fork %>
+        <%= f.number_field :fork_cost %>
 
+        <%= f.primary "Submit new build" %>
+      <% end %>
 
-    <%= f.primary "Submit new build" %>
-  <% end %>
+    </div>
+  </div>
 </div>
+
+
+
+
+
+
+
+
 
 
