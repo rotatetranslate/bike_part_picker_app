@@ -36,11 +36,17 @@
           Like <span class="badge"> <%= @bike.likes.count %> </span>
         <% end %>
       <% end %>
+      <br>
+      <div class="edit">
+        <% if current_user && current_user.id == @bike.user_id %>
+          <%= link_to edit_bike_path(@bike.id), class: "btn btn-warning" do %>
+            Edit Build
+          <% end %>
+        <% end %>
+      </div>
     </div>
-
   </div>
 </div>
 
-<% if current_user && current_user.id == @bike.user_id %>
-  <%= link_to "Edit bike build", edit_bike_path %>
-<% end %>
+
+
