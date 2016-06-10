@@ -4,7 +4,8 @@ A site that allows you to put together hypothetical bike builds. You can use the
 ##Features
 * CRUD functionality for users and bike builds
 * Enter components and prices to calculate total cost
-* Ability to 'like' and 'unlike' bikes and view liked bikes in user profile
+* If logged in, ability to 'like' and 'unlike' bikes and view liked bikes in user profile
+* Able to edit bikes you have created
 
 ##Technologies
 * Ruby on Rails
