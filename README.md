@@ -1,6 +1,8 @@
 ## Bike Part Picker
 A site that allows you to put together hypothetical bike builds. You can use the site to organize parts lists and prices and save them to your profile to come back to.
 
+[Link](https://intense-stream-53046.herokuapp.com/)
+
 ##Features
 * CRUD functionality for users and bike builds
 * Enter components and prices to calculate total cost
